@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flip-card {
+    background-color: transparent;
+    width: 190px;
+    height: 280px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    margin: 5px;
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin: 0;
+    word-break: break-word;
+  }
+
+  .title_big {
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0;
+    word-break: break-word;
+  }
+
+  .hour_big{
+    font-size: 0.7rem;
+    font-weight: 300;
+    margin: 0;
+    word-break: break-word;
+  }
+
+  .p_break{
+    word-break: break-word;
+  }
+
+  .server {
+    font-size: 0.8rem;
+    width: 120px;
+    height: 25px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-color: white;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid orangered;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+       rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+    color: orangered;
+  }
+  
+  .flip-card-back {
+    background: linear-gradient(120deg, rgb(255, 174, 145) 30%, orangered 88%,
+       bisque 40%, rgb(255, 185, 160) 78%);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+@media (max-width: 768px) {
+    .container {
+        width: calc(50% - 10px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: calc(100% - 10px); 
+    }
+}
