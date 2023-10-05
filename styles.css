@@ -3,6 +3,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .flip-card {
     background-color: transparent;
     width: 190px;
